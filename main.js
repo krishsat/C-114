@@ -3,24 +3,14 @@ function preload(){
 }
 
 function setup(){
-    canvas = createCanvas(640, 480);
-    canvas.position(110, 250);
-
-    video = createCapture(VIDEO);
-    video.hide();
-
-    tint_colour = "";
+    canvas = createCanvas(300, 300);
+    canvas.center();
 }
 
 function draw(){
-    image(video, 0, 0, 640, 480);
-    tint(tint_colour);
+
 }
 
 function take_snapshot(){
-    save('filter.png');
-}
-
-function filter_tint(){
-    tint_colour = document.getElementById("colour_name").value;
+    save('my_filter_image.png');
 }
